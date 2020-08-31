@@ -7,5 +7,8 @@
     "json-server": "^0.16.1",
     "pluralize": "^8.0.0"
   },
-  "private": true
+  "private": true,
+  "engines": {
+    "node": "10"
+  }
 }
