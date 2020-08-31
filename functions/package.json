@@ -2,10 +2,10 @@
   "name": "functions",
   "description": "Cloud Functions for Firebase",
   "dependencies": {
-    "firebase-admin": "~5.2.1",
-    "firebase-functions": "^0.6.3",
-    "json-server": "^0.12.0",
-    "pluralize": "^7.0.0"
+    "firebase-admin": "~9.1.1",
+    "firebase-functions": "^3.11.0",
+    "json-server": "^0.16.1",
+    "pluralize": "^8.0.0"
   },
   "private": true
 }
