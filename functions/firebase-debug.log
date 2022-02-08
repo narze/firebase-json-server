@@ -1,0 +1,39 @@
+[debug] [2022-02-08T17:49:48.360Z] ----------------------------------------------------------------------
+[debug] [2022-02-08T17:49:48.364Z] Command:       /Users/ibmislamabad/.nvm/versions/node/v14.17.6/bin/node /usr/local/bin/firebase serve --only=hosting,functions --project pizza-app
+[debug] [2022-02-08T17:49:48.364Z] CLI Version:   9.18.0
+[debug] [2022-02-08T17:49:48.364Z] Platform:      darwin
+[debug] [2022-02-08T17:49:48.365Z] Node Version:  v14.17.6
+[debug] [2022-02-08T17:49:48.366Z] Time:          Tue Feb 08 2022 22:49:48 GMT+0500 (Pakistan Standard Time)
+[debug] [2022-02-08T17:49:48.366Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-02-08T17:49:48.418Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-02-08T17:49:48.419Z] > authorizing via signed-in user (mejaz.bese21@gmail.com)
+[debug] [2022-02-08T17:49:48.419Z] [iam] checking project pizza-app for permissions ["firebase.projects.get"]
+[debug] [2022-02-08T17:49:48.421Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2022-02-08T17:49:48.421Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-08T17:49:49.088Z] <<< HTTP RESPONSE 200 {"date":"Tue, 08 Feb 2022 17:49:49 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-08T17:49:49.135Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/pizza-app:testIamPermissions  
+ {"permissions":["firebase.projects.get"]}
+[debug] [2022-02-08T17:49:50.858Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 08 Feb 2022 17:49:51 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1346","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-08T17:49:50.859Z] [iam] error while checking permissions, command may fail: FirebaseError: Authorization failed. This account is missing the following required permissions on project pizza-app:
+
+  firebase.projects.get
+[debug] [2022-02-08T17:49:50.861Z] > refreshing access token with scopes: []
+[debug] [2022-02-08T17:49:50.861Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2022-02-08T17:49:51.475Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Tue, 08 Feb 2022 17:49:51 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2022-02-08T17:49:51.533Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/pizza-app [none]
+[debug] [2022-02-08T17:49:52.390Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/pizza-app 403
+[debug] [2022-02-08T17:49:52.390Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/pizza-app {"error":{"code":403,"message":"The caller does not have permission","status":"PERMISSION_DENIED"}}
+[debug] [2022-02-08T17:49:52.391Z] HTTP Error: 403, The caller does not have permission
+[debug] [2022-02-08T17:49:52.950Z] FirebaseError: HTTP Error: 403, The caller does not have permission
+    at module.exports (/usr/local/lib/node_modules/firebase-tools/lib/responseToError.js:38:12)
+    at Client.doRequest (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:238:23)
+    at processTicksAndRejections (internal/process/task_queues.js:95:5)
+    at async Client.request (/usr/local/lib/node_modules/firebase-tools/lib/apiv2.js:96:20)
+    at async Object.getFirebaseProject (/usr/local/lib/node_modules/firebase-tools/lib/management/projects.js:290:21)
+    at async needProjectNumber (/usr/local/lib/node_modules/firebase-tools/lib/projectUtils.js:46:22)
+    at async /usr/local/lib/node_modules/firebase-tools/lib/command.js:188:17
+[error] 
+[error] Error: Failed to get Firebase project pizza-app. Please make sure the project exists and your account has permission to access it.
